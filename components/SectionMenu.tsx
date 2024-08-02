@@ -35,8 +35,8 @@ export default function SectionMenu({ title, texts, example, links }: Props) {
         />
       </h2>
       <p
-        className={`text-justify border-x border-x-zinc-300 border-b border-b-zinc-300 rounded-b p-2 transition-all ease-linear ${
-          !show && 'h-0 p-0 border-none -z-10'
+        className={`text-justify border-x border-x-zinc-300 border-b border-b-zinc-300 rounded-b p-2 ease-linear ${
+          !show && 'hidden'
         }`}
       >
         {texts.map((text, i) =>

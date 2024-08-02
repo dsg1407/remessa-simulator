@@ -320,7 +320,7 @@ export default function Home() {
 
           <section
             ref={helpSectionRef}
-            className={`flex md:max-w-[35%] items-stretch w-full transition-all duration-300${
+            className={`flex md:max-w-[35%] items-stretch w-full transition-all duration-300 ${
               !showHelpMenu &&
               'md:flex md:-ml-[35%] md:translate-x-96 md:opacity-0'
             }`}
