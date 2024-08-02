@@ -331,7 +331,10 @@ export default function Home() {
             }`}
           >
             <div className="md:max-h-[80vh] w-full py-7 pl-7 pr-7 md:pr-0 md:ml-5 rounded-2xl bg-zinc-200 text-sm flex flex-col ">
-              <Text className="text-2xl font-nunito font-extrabold text-center mb-3 uppercase md:mr-7">
+              <Text
+                heading
+                className="xl:text-2xl font-extrabold text-center mb-3 uppercase md:mr-7"
+              >
                 Remessa conforme
               </Text>
 
@@ -410,6 +413,7 @@ export default function Home() {
           <a
             href="https://www.linkedin.com/in/dsg1407/"
             target="_blank"
+            rel="noopener"
             className="text-xs font-nunito text-zinc-600 hover:scale-105 hover:opacity-75 transition flex items-center w-fit"
           >
             <LinkedinLogo
@@ -427,10 +431,12 @@ export default function Home() {
         <a
           href="https://www.buymeacoffee.com/dsg1407"
           target="_blank"
+          rel="noopener"
           title="Buy me a Coffee!!"
         >
           <img
             className="w-10 md:w-16 hover:scale-95"
+            alt="Donation QR Code image."
             src="./buy-coffee-qr.png"
           />
         </a>

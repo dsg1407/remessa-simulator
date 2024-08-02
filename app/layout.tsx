@@ -11,17 +11,18 @@ const poppins = Poppins({
 const nunito = Nunito({ subsets: ['latin'], variable: '--font-nunito' })
 
 export const metadata: Metadata = {
-  title: 'Quanto custa?',
+  title: 'Quanto custa? - Calculo Remessa Conforme',
   authors: [
     {
       name: 'Daniel Santos Gonçalves',
       url: 'https://www.linkedin.com/in/dsg1407/',
     },
   ],
-
   description:
-    'Um simulador de valores de tributos de importação considerando a nova regra do Remessa Conforme.',
-  keywords: 'dsg1407, remessa conforme, simulador, calculo remessa conforme',
+    'Simulador de tributos de importação atualizado com a nova regra Remessa Conforme 2024. Calcule os valores a pagar final nas suas compras internacionais, impostos de importação e INSS de acordo com a nova regra.',
+
+  keywords:
+    'dsg1407, remessa conforme, simulador, calculo remessa conforme, valor, imposto, importação, dólares, compras, alíquota',
   robots: 'index,follow',
 }
 

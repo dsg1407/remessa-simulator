@@ -53,7 +53,12 @@ export default function SectionMenu({ title, texts, example, links }: Props) {
         )}
         {links &&
           links.map(({ name, url }) => (
-            <a href={url} target="_blank" className="block m-1 text-sky-600">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener"
+              className="block m-1 text-sky-600"
+            >
               {name}
             </a>
           ))}
