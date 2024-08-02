@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   Question,
   Coins,
@@ -49,6 +49,12 @@ export default function Home() {
   const LOW_II_TAX = 0.2
   const HIGH_II_TAX = 0.6
   const TOP_DISCOUNT = 20
+
+  const helpSectionRef = useRef(null)
+
+  function handleHelpButtonClick() {
+    setShowHelpMenu((state) => !state)
+  }
 
   async function getCurrencyConversion() {
     try {
@@ -138,9 +144,7 @@ export default function Home() {
                   <Text heading>Simulação</Text>
                   <button
                     className="cursor-pointer hover:opacity-50"
-                    onClick={() => {
-                      setShowHelpMenu((state) => !state)
-                    }}
+                    onClick={handleHelpButtonClick}
                   >
                     <Question size={26} />
                   </button>
@@ -315,6 +319,7 @@ export default function Home() {
           </section>
 
           <section
+            ref={helpSectionRef}
             className={`flex md:max-w-[35%] items-stretch w-full transition-all duration-300${
               !showHelpMenu &&
               'md:flex md:-ml-[35%] md:translate-x-96 md:opacity-0'
