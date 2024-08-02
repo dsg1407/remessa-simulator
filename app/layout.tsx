@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Poppins, Nunito } from 'next/font/google'
 import './globals.css'
 
@@ -31,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${nunito.variable}`}>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
