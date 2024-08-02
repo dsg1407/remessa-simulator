@@ -50,13 +50,13 @@ export default function Home() {
   const HIGH_II_TAX = 0.6
   const TOP_DISCOUNT = 20
 
-  const helpSectionRef = useRef<HTMLDivElement>(document.createElement('div'))
+  const helpSectionRef = useRef<HTMLDivElement | null>(null)
 
   function handleHelpButtonClick() {
     setShowHelpMenu((state) => !state)
 
     window.scrollTo({
-      top: helpSectionRef.current.offsetTop,
+      top: helpSectionRef.current?.offsetTop,
       behavior: 'smooth',
     })
   }
