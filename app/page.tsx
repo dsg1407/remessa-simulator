@@ -41,11 +41,11 @@ export default function Home() {
   const [BRLValue, setBRLValue] = useState('')
   const [USDValue, setUSDValue] = useState('')
   const [IIValue, setIIValue] = useState('')
-  const [INSSValue, setINSSValue] = useState('')
+  const [ICMSValue, setICMSValue] = useState('')
   const [discount, setDiscount] = useState('')
   const [finalValue, setFinalValue] = useState('')
 
-  const INSS_TAX = 0.17
+  const ICMS_TAX = 0.17
   const LOW_II_TAX = 0.2
   const HIGH_II_TAX = 0.6
   const TOP_DISCOUNT = 20
@@ -105,17 +105,17 @@ export default function Home() {
         ? TOP_DISCOUNT * exchangeRate.cotacaoCompra
         : 0
 
-    const INSSTaxValue =
-      (Number(BRLValue) + (importTaxValue - discountValue)) / (1 - INSS_TAX) -
+    const ICMSTaxValue =
+      (Number(BRLValue) + (importTaxValue - discountValue)) / (1 - ICMS_TAX) -
       Number(BRLValue) -
       importTaxValue +
       discountValue
 
     const finalResult =
-      Number(BRLValue) + importTaxValue + INSSTaxValue - discountValue
+      Number(BRLValue) + importTaxValue + ICMSTaxValue - discountValue
 
     setIIValue(importTaxValue.toString())
-    setINSSValue(INSSTaxValue.toString())
+    setICMSValue(ICMSTaxValue.toString())
     setDiscount(discountValue.toString())
     setFinalValue(finalResult.toString())
   }
@@ -247,13 +247,13 @@ export default function Home() {
 
               <FormGroup>
                 <Input
-                  name="inss"
+                  name="ICMS"
                   currency="R$"
-                  label="INSS"
-                  info={`Taxa de ${INSS_TAX.toLocaleString('pt-br', {
+                  label="ICMS"
+                  info={`Taxa de ${ICMS_TAX.toLocaleString('pt-br', {
                     style: 'percent',
                   })}`}
-                  value={Number(INSSValue).toLocaleString('pt-br', {
+                  value={Number(ICMSValue).toLocaleString('pt-br', {
                     style: 'decimal',
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2,
@@ -262,7 +262,7 @@ export default function Home() {
                   disabled
                 />
 
-                <div className="hidden md:flex md:w-full md:flex-1">
+                <div className="md:flex-row  md:w-full md:flex-1">
                   {Number(BRLValue) > 0 && (
                     <div className="w-full my-auto flex flex-col items-center gap-2">
                       <Text className="font-nunito text-center px-16 border-b border-b-zinc-400 text-sm text-zinc-800 font-semibold flex items-center gap-2">
@@ -363,24 +363,24 @@ export default function Home() {
                   title="Compras até 50 dólares"
                   texts={[
                     'Com a nova regra, para compras de até 50 dólares, o Imposto de Importação aumentou de 0% para 20%.',
-                    'Com isso, o valor total a pagar pela compra inclui o valor do produto, considerando o frete, o Imposto de Importação e o INSS.',
+                    'Com isso, o valor total a pagar pela compra inclui o valor do produto, considerando o frete, o Imposto de Importação e o ICMS.',
                   ]}
-                  example="Valor a pagar = Valor Produto + Imposto Importação + INSS"
+                  example="Valor a pagar = Valor Produto + Imposto Importação + ICMS"
                 />
                 <SectionMenu
                   title="Compras acima de 50 dólares"
                   texts={[
                     'Para compras acima de 50 dólares, o Imposto de Importação é de 60%, com um desconto de 20 dólares.',
-                    'O valor total a pagar pela compra deve incluir o valor do produto, considerando o frete, o Imposto de Importação (com o desconto aplicado), e o INSS.',
+                    'O valor total a pagar pela compra deve incluir o valor do produto, considerando o frete, o Imposto de Importação (com o desconto aplicado), e o ICMS.',
                   ]}
-                  example="Valor a pagar = Valor Produto + (Imposto Importação - Descontos) + INSS"
+                  example="Valor a pagar = Valor Produto + (Imposto Importação - Descontos) + ICMS"
                 />
                 <SectionMenu
-                  title="Cálculo INSS"
+                  title="Cálculo ICMS"
                   texts={[
-                    'O cálculo do INSS, diferentemente do Imposto de Importação, é feito "por dentro", resultando em uma alíquota efetiva maior que a nominal.',
+                    'O cálculo do ICMS, diferentemente do Imposto de Importação, é feito "por dentro", resultando em uma alíquota efetiva maior que a nominal.',
                     'Assim, para a alíquota nominal de 17% atualmente aplicada, a alíquota efetivamente paga é de 20,48%.',
-                    'Para o cálculo do INSS deve-se considerar o valor do produto já aplicado o Imposto de Importação',
+                    'Para o cálculo do ICMS deve-se considerar o valor do produto já aplicado o Imposto de Importação',
                   ]}
                   example="%Efetivo = Alíquota nominal / (1 - Alíquota nominal)"
                 />
