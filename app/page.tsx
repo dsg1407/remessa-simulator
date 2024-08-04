@@ -64,10 +64,10 @@ export default function Home() {
   async function getCurrencyConversion() {
     try {
       const today = dayjs()
-      const yesterday = today.subtract(1, 'day')
+      const oldDate = today.subtract(4, 'day')
 
       const { data } = (await axios.get(
-        `https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodoFechamento(codigoMoeda=@codigoMoeda,dataInicialCotacao=@dataInicialCotacao,dataFinalCotacao=@dataFinalCotacao)?@codigoMoeda='USD'&@dataInicialCotacao='${yesterday.format(
+        `https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaPeriodoFechamento(codigoMoeda=@codigoMoeda,dataInicialCotacao=@dataInicialCotacao,dataFinalCotacao=@dataFinalCotacao)?@codigoMoeda='USD'&@dataInicialCotacao='${oldDate.format(
           'MM-DD-YYYY'
         )}'&@dataFinalCotacao='${today.format('MM-DD-YYYY')}'&$format=json`
       )) as DataProps
