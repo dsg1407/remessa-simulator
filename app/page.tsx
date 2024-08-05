@@ -333,7 +333,7 @@ export default function Home() {
             <div className="md:max-h-[80vh] w-full py-7 pl-7 pr-7 md:pr-0 md:ml-5 rounded-2xl bg-zinc-200 text-sm flex flex-col ">
               <Text
                 heading
-                className="xl:text-2xl font-extrabold text-center mb-3 uppercase md:mr-7"
+                className="text-xl md:text-2xl xl:text-2xl font-extrabold text-center mb-3 uppercase md:mr-7"
               >
                 Remessa conforme
               </Text>

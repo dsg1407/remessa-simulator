@@ -24,7 +24,10 @@ export default function Input({
 
   return (
     <div className="flex flex-1 w-full flex-col gap-1 ">
-      <label htmlFor={name} className="flex items-center gap-2 relative">
+      <label
+        htmlFor={name}
+        className="flex text-sm md:text-base items-center gap-2 relative"
+      >
         {label}{' '}
         {info && (
           <InfoIcon

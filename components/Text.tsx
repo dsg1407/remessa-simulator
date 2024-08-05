@@ -16,7 +16,7 @@ export default function Text({
     <>
       {heading ? (
         <h1
-          className={`font-bold text-3xl xl:text-4xl font-nunito
+          className={`font-bold text-2xl md:text-3xl xl:text-4xl font-nunito
           ${className}`}
           {...rest}
         >
