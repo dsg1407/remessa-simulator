@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br>
+<h1 style="display:flex; align-items: end; justify-content:center">
+<img alt="Logo"src="./app/favicon.ico" width="80px"/>
+  Quanto custa?
+</h1>
 
-## Getting Started
+<p align="center">
+  A simulator to calculate the cost of purchases via Remessa Conforme
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-packages">Packages</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-application-image">Application Images</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#author">Author</a>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<p align="center">
+  <img alt="Typescript Badge" src="https://img.shields.io/badge/Typescript-blue"/>
+  <img alt="License" src="https://img.shields.io/badge/NextJs-gray"/>
+  <img alt="Typescript Badge" src="https://img.shields.io/badge/ReactJs-blue"/>
+  <img alt="License" src="https://img.shields.io/badge/MIT-green"/>
+</p>
+
+<p align="center">
+  <img alt="Application Demo" src="https://i.imgur.com/vj0mj58.gif" width="60%">
+</p>
+<br>
+
+## 🚀 Technologies
+
+Here are the technologies used in this project.
+
+- Next 14.2.5
+- TypeScript ˆ5
+- React ˆ18
+- Tailwindcss 3.4.1
+
+---
+
+## 📦 Packages
+
+Here are the packages used in this project.
+
+- axios -> A promise-based HTTP Client for node.js and the browser
+- dayjs -> A minimalist JavaScript library that parses, validates, manipulates, and displays dates and times for modern browsers
+- tailwindcss -> A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.
+- phosphor-icons/react -> icon library for interfaces
+
+---
+
+## 📱 Application Images
+
+### Home
+
+![Home screen](https://i.imgur.com/XWSgFaJ.png)
+
+### Simulation
+
+![Home screen](https://i.imgur.com/TjFpyRA.png)
+
+### Help Menu Opened
+
+![Home screen](https://i.imgur.com/ZZqavcJ.png)
+
+<!-- https://github.com/dsg1407/daily-diet/assets/42188852/043c176b-7d1e-4f1d-8fb3-096cbfea6e11 -->
+
+---
+
+## 💻 Getting started
+
+Here are the commands and steps on how to start the project.
+
+**Dependency**
+
+- NodeJS
+- NPM (Package manager of your choice)
+
+<br/>
+
+Install the dependencies using a package manager, the one used in the project was NPM.
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the project on your machine using NPM.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To build the project using NPM.
 
-## Learn More
+```
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+To run the project in production using NPM.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br>
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📎 Links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Deploy on [Vercel](https://vercel.com/): https://remessa-conforme-simulador.vercel.app/
+- Repository: https://github.com/dsg1407/remessa-simulator
+
+---
+
+## Author
+
+Made with ♥ by Daniel Gonçalves 🚀 [dsg1407](https://github.com/dsg1407)
