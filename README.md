@@ -1,5 +1,5 @@
 <br>
-<h1 style="display:flex; align-items: end; justify-content:center">
+<h1 align="center" style="display:flex; align-items: end; justify-content:center">
 <img alt="Logo"src="./app/favicon.ico" width="80px"/>
   Quanto custa?
 </h1>
