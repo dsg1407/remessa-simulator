@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Poppins, Nunito } from 'next/font/google'
 import './globals.css'
+import AdSense from '@/components/AdSense'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${nunito.variable}`}>
+      <AdSense pId="3246541131736689" />
       <body className={poppins.className}>
         {children}
         <SpeedInsights />
