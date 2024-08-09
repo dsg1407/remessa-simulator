@@ -38,6 +38,10 @@ export default function RootLayout({
       <GoogleAnalytics gaId="G-1QJZ3MMDSE" />
       <GoogleTagManager gtmId="GTM-W8RT7DHD" />
       <AdSense pId="3246541131736689" />
+      <meta
+        name="google-site-verification"
+        content="Y5SImezmIJMEv3qnON31A_dszKcWFHudc5E8RhsSy90"
+      />
       <body className={poppins.className}>
         {children}
         <SpeedInsights />
