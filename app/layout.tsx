@@ -3,7 +3,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Poppins, Nunito } from 'next/font/google'
 import './globals.css'
 import AdSense from '@/components/AdSense'
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,8 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${nunito.variable}`}>
-      <GoogleAnalytics gaId="G-1QJZ3MMDSE" />
-      <GoogleTagManager gtmId="GTM-W8RT7DHD" />
       <AdSense pId="3246541131736689" />
       <meta
         name="google-site-verification"

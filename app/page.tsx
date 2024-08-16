@@ -30,7 +30,7 @@ type DataProps = {
 }
 
 export default function Home() {
-  const [showHelpMenu, setShowHelpMenu] = useState(false)
+  const [showHelpMenu, setShowHelpMenu] = useState(true)
   const [exchangeRate, setExchangeRate] = useState<ResponseData>({
     cotacaoCompra: 0,
     cotacaoVenda: 0,
@@ -146,7 +146,9 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-start w-full py-5 md:pt-5 md:pb-12">
               <div className="w-full flex items-center justify-between">
                 <div className="flex items-center gap-1">
-                  <Text heading>Simulação</Text>
+                  <Text className="font-bold text-2xl md:text-3xl font-nunito">
+                    Simulação
+                  </Text>
                   <button
                     className="cursor-pointer hover:opacity-50"
                     onClick={handleHelpButtonClick}
